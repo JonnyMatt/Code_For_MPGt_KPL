@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<Title>Fuel Economy Converter</Title>
+<script>
+function  doMath2() {
+var one = eval(document.form2.quant2.value)
+var two = eval(document.form2.factor2.value)
+var prod = one  *   two
+document.form2.result2.value = prod.toFixed(2);
+document.getElementById("showresult2").style.visibility = "visible";
+}
+function hideResult2() {
+document.getElementById("showresult2").style.visibility = "hidden";
+}
+</script>
+</head>
+
+<body>
+<h3>Fuel Economy Converter</h3>
+<fieldset>
+<legend>Quick Conversion - MPG to KPL - US Gallons</legend>
+<ol>
+<li>
+  <label for="quant2">Miles Per Gallon (US)</label>
+  <input type="text" name="quant2" id="quant2" tabindex="1"><input name="factor2" type="hidden" value="0.425143707">
+  <input type="button" name="submit2" id="submit2" value="Convert" onclick="doMath2()" tabindex="2">
+  <input type="reset" name="button2" id="button2" value="Reset" onclick="hideResult2()" tabindex="3">
+  <div id="showresult2">
+  <label for="result2">Kilometres Per Litre</label>
+  <input type="text" name="result2" id="result2" tabindex="4">
+  </div>  
+</li>
+</ol>
+</fieldset>
+</body>
+</html>
+
+<!--http://www.mpgtokpl.com/-->
